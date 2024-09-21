@@ -18,18 +18,26 @@ export default function Intro() {
       >
         <img src="https://img.freepik.com/free-photo/side-view-ofserious-man_23-2148946213.jpg" alt="Shebi" className="w-full h-full grayscale object-cover" />
       </motion.div>
-        <div className='pt-32'>
+        <motion.div
+        initial={{opacity:0}}
+        whileInView={{opacity:1}}
+        transition={{
+          delay: 0.2,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className='pt-32'>
         <LampContainer className=''>
            
            <motion.h1
-             initial={{ opacity: 0.5, y: 100 }}
+             initial={{ opacity: 0, y: 100 }}
              whileInView={{ opacity: 1, y: 0 }}
              transition={{
-               delay: 0.3,
+               delay: 1,
                duration: 0.8,
                ease: "easeInOut",
              }}
-             className=" bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+             className=" bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium text-white drop-shadow-md shadow-purple-950 tracking-tight text-transparent md:text-7xl"
            >   
            I’M SHEBY<br/>
                
@@ -38,7 +46,7 @@ export default function Intro() {
              initial={{ opacity: 0.5, y: 100 }}
              whileInView={{ opacity: 1, y: 0 }}
              transition={{
-               delay: 0.3,
+               delay: 1.6,
                duration: 0.8,
                ease: "easeInOut",
              }}
@@ -48,7 +56,7 @@ export default function Intro() {
                
            </motion.h1>
          </LampContainer>
-        </div>
+        </motion.div>
   
     </div>
   )
