@@ -9,17 +9,21 @@ import ContactUs from "@/components/ContactUs";
 import Blogs from "@/components/Blogs";
 import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials";
+import MainService from "@/components/Services/MainService";
+import Projects from "@/components/Projects";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-   <div className="bg-black min-h-screen h-full">
+   <div className="bg-neutral-950 min-h-screen h-full">
     <Navbar/>
     {/* <div className="h-screen bg-black mt-32"></div> */}
     <Intro/>
     <Description/>
-    <Skills/>
+    <MainService/>
+    <Projects/>
+    {/* <Skills/> */}
     <Testimonials/>
     <Blogs/>
     <ContactUs/>

@@ -23,7 +23,8 @@ export default function Blogs() {
         }
     ]
   return (
-    <div className='min-h-screen bg-black text-white sm:max-w-7xl mx-auto py-10'>
+   <div className='w-screen bg-black'>
+     <div className='min-h-screen bg-black text-white sm:max-w-7xl mx-auto py-10'>
         <motion.h1 className='text-4xl font-bold text-white text-center pb-6'>
             Know more about <span className='text-blue-500'>me!</span>
         </motion.h1>
@@ -43,5 +44,6 @@ export default function Blogs() {
         </button>
         </div>
     </div>
+   </div>
   )
 }
