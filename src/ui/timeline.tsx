@@ -7,13 +7,19 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import FadeIn from "./FadeIn";
+import Link from "next/link";
 
+// Updated TimelineEntry interface to match the structure of myJourney.sections
 interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
+  position: string;
+  company: string;
+  year: number;
+  location: string;
+  linkedin: string;
+  contributions: string[];
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({ data }: any) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -39,19 +45,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-       <FadeIn>
-       <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
-          My journey
-        </h2>
-        <p className="text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working as an AI Developer for the past 2 years. Here&apos;s
-          a timeline of my journey.
-        </p>
-       </FadeIn>
+        <FadeIn>
+          <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
+            My Journey
+          </h2>
+          <p className="text-neutral-300 text-sm md:text-base max-w-xl">
+          My journey has been focused on leveraging AI technologies to create impactful solutions. From building intelligent chatbots to developing advanced AI tools, I’ve consistently pushed the boundaries of what’s possible with machine learning and AI. Here’s a timeline of my growth and accomplishments in the field.
+
+          </p>
+        </FadeIn>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => (
+        {data.sections.map((item:any, index:number) => (
           <div
             key={index}
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
@@ -61,15 +67,40 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <div className="h-4 w-4 rounded-full bg-neutral-800 border border-neutral-700 p-2" />
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 ">
-                {item.title}
+                {item.position}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
+              <Link target="_blank" href={item.linkedin}><img src={`/logos/${item.logo}`} className="h-16 w-auto my-2 " /></Link>
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500">
-                {item.title}
+                {item.position}
               </h3>
-              {item.content}{" "}
+              <div className="mb-4">
+                <h4 className="text-lg md:text-2xl font-bold text-white">
+                  {item.company}
+                </h4>
+                <p className=" text-blue-400 text-sm md:text-base">
+                  {item.year} - {item.location}
+                </p>
+              
+              </div>
+              <p className="text-neutral-200 text-sm md:text-base my-4">
+                {item.description}
+              </p>
+              <p className="text-neutral-300 font-medium text-sm md:text-base my-4">
+               Major Contributions :
+              </p>
+              <ul className="list-disc list-inside font-normal text-neutral-300 pl-2">
+                {item.contributions.map((contribution:any, i:number) => (
+                  <li key={i}>{contribution}</li>
+                ))}
+              </ul>
+              {item?.childs && <div className="flex gap-x-2">{item.childs.map((child:any, i:number) => (
+                <Link key={i} href={child.url} target="_blank" className="text-blue-400 hover:underline">{child.title}
+                <img src={`/logos/${child.logo}`} className="h-16 w-auto my-2 " />
+                </Link>
+              ))}</div>}
             </div>
           </div>
         ))}

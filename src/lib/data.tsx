@@ -16,6 +16,7 @@ import {
 } from "@tabler/icons-react";
 
 import React from "react";
+import { myJourney } from "./journeydata";
 
 export default function MainDummy() {
   return <div></div>;
@@ -172,4 +173,5 @@ export const DATA = {
   welcome: welcomeSection,
   projects: sample_projects,
   services: SERVICES,
+  journey:myJourney
 };
