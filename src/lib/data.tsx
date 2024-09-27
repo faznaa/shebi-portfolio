@@ -30,11 +30,11 @@ const heroData = {
 };
 
 const welcomeSection = {
-  subtitle_top: "Hire the Best AI Developer",
+  subtitle_top: "Welcome to the forefront of AI innovation.",
   mainTitleWhite: "Welcome. Step into my world of",
   mainTitleBlue: "AI Innovation.",
   description:
-    "I'm Sheby, a dedicated AI developer and Data Scientist passionate about integrating smart AI solutions like ChatGPT into everyday business workflows.",
+    "I'm Sheby, an experienced AI developer and data scientist with a passion for transforming business workflows through intelligent AI solutions like ChatGPT. Let me help you unlock the power of AI to enhance your business efficiency and drive results.",
 };
 
 const sample_projects = [
