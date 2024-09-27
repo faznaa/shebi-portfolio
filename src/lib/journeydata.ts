@@ -3,13 +3,13 @@ export const myJourney = {
     sections: [
     
       {
-        position: "Freelance Data Scientist & AI Specialist",
+        position: "Data Scientist & AI Developer",
         company: "Upwork",
         logo:'upwork.png',
         year: 2023,
         linkedin: "https://www.upwork.com/freelancers/~01f3b3d827a29ef7a3",
         description:
-          "As a Freelance Data Scientist and AI Specialist on Upwork, I provide AI-driven solutions to clients worldwide, delivering tailored projects that optimize business operations and enhance decision-making.",
+          "As a Freelance Data Scientist and AI Developer on Upwork, I provide AI-driven solutions to clients worldwide, delivering tailored projects that optimize business operations and enhance decision-making.",
         contributions: [
           "Successfully completed 25+ AI and data science projects, delivering high-quality solutions.",
           "Specialized in developing AI-driven tools like custom chatbots and automated systems.",
@@ -54,8 +54,8 @@ export const myJourney = {
           "Played a key role in experimenting with new AI techniques to disrupt traditional industries and create scalable solutions."
         ],
         childs:[
-            {name:"Sumups", url:"https://www.crystalballintelligence.com/",logo:'sumsups.png'},
-            {name:"TryFamschool", url:"https://www.crystalballintelligence.com/",logo:'tryfamschool_logo.jpeg'}
+            {name:"Sumups", url:"https://sumups-ai.webflow.io/",logo:'sumups.png'},
+            {name:"TryFamschool", url:"https://www.tryfamschool.com/classroom",logo:'tryfamschool_logo.jpeg'}
         ]
       },
       {

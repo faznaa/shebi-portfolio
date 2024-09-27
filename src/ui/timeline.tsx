@@ -60,7 +60,7 @@ export const Timeline = ({ data }: any) => {
         {data.sections.map((item:any, index:number) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:pt-20 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
@@ -91,14 +91,14 @@ export const Timeline = ({ data }: any) => {
               <p className="text-neutral-300 font-medium text-sm md:text-base my-4">
                Major Contributions :
               </p>
-              <ul className="list-disc list-inside font-normal text-neutral-300 pl-2">
+              <ul className="list-disc list-outside font-normal text-neutral-300 pl-6">
                 {item.contributions.map((contribution:any, i:number) => (
                   <li key={i}>{contribution}</li>
                 ))}
               </ul>
-              {item?.childs && <div className="flex gap-x-2">{item.childs.map((child:any, i:number) => (
+              {item?.childs && <div className="flex gap-x-4">{item.childs.map((child:any, i:number) => (
                 <Link key={i} href={child.url} target="_blank" className="text-blue-400 hover:underline">{child.title}
-                <img src={`/logos/${child.logo}`} className="h-16 w-auto my-2 " />
+                <img src={`/logos/${child.logo}`} className="h-12 rounded-sm my-2 " />
                 </Link>
               ))}</div>}
             </div>

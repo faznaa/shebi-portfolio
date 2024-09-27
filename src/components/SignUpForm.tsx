@@ -51,7 +51,7 @@ function SignupFormDemo() {
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="twitterpassword">Your message</Label>
-          <Input id="message" placeholder="Type your message.." type="textarea" value={fields.message} onChange={updateFields} />
+          <Input id="message" placeholder="Type your message.." type="textarea" value={fields.message} setValue={(e:any) => setFields({ ...fields, message: e })} />
 
         </LabelInputContainer>
 
