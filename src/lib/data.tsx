@@ -25,7 +25,7 @@ const heroData = {
   title: "I'M SHEBY",
   subtitle: "AI DEVELOPER & DATA SCIENTIST",
   profile:
-    "https://img.freepik.com/free-photo/side-view-ofserious-man_23-2148946213.jpg",
+    "/profile.jpeg",
 };
 
 const welcomeSection = {
