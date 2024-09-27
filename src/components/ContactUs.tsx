@@ -22,7 +22,7 @@ export default function ContactUs() {
   return (
    <div className='h-screen' id="contact">
      <AuroraBackground>
-        <div className='z-50 grid sm:grid-cols-2 gap-x-4 h-screen py-10 sm:max-w-6xl mx-auto sm:py-16'>
+        <div className='z-20 grid sm:grid-cols-2 gap-x-4 h-screen py-10 sm:max-w-6xl mx-auto sm:py-16'>
         <motion.div className='pt-12'
         initial={{opacity:0.5,x:-100}}
         whileInView={{opacity:1,x:0}}

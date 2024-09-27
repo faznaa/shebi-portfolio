@@ -30,7 +30,7 @@ const heroData = {
 };
 
 const welcomeSection = {
-  subtitle_top: "The road to freedom starts from here",
+  subtitle_top: "Hire the Best AI Developer",
   mainTitleWhite: "Welcome. Step into my world of",
   mainTitleBlue: "AI Innovation.",
   description:

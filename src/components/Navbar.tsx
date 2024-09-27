@@ -33,7 +33,7 @@ export default function Navbar() {
     },
     {
       title: "Contact",
-      href: "#contact",
+      href: "/contact",
       action:() => scrollToId('contact')
     },
   ];
