@@ -1,37 +1,40 @@
+import ChatbotDevelopment from "@/components/MyServices/ChatbotDevelopment";
+import DataDashboards from "@/components/MyServices/DashboardsCustom";
+import LLMToolsForBusiness from "@/components/MyServices/LLMToolsForBusiness";
+import WorkflowAutomation from "@/components/MyServices/WorkflowAutomation";
 import {
-    IconBrandX,
-    IconExchange,
-    IconHome,
-    IconNewSection,
-    IconTerminal2,
-    IconBrandLinkedin,
-    IconBrandUpwork,
-    IconBrandGithub,
-    IconBrandSkype,
-    IconBrandWhatsapp
-  } from "@tabler/icons-react";
+  IconBrandX,
+  IconExchange,
+  IconHome,
+  IconNewSection,
+  IconTerminal2,
+  IconBrandLinkedin,
+  IconBrandUpwork,
+  IconBrandGithub,
+  IconBrandSkype,
+  IconBrandWhatsapp,
+} from "@tabler/icons-react";
 
-import React from 'react'
-  
+import React from "react";
+
 export default function MainDummy() {
-    return (
-      <div>
-      </div>
-    )
+  return <div></div>;
 }
-  
+
 const heroData = {
-    title:"I'M SHEBY",
-    subtitle:"AI DEVELOPER & DATA SCIENTIST",
-    profile:'https://img.freepik.com/free-photo/side-view-ofserious-man_23-2148946213.jpg'
-}
+  title: "I'M SHEBY",
+  subtitle: "AI DEVELOPER & DATA SCIENTIST",
+  profile:
+    "https://img.freepik.com/free-photo/side-view-ofserious-man_23-2148946213.jpg",
+};
 
 const welcomeSection = {
-    subtitle_top:'The road to freedom starts from here',
-    mainTitleWhite:'Welcome. Step into my world of',
-    mainTitleBlue:'AI Innovation.',
-    description:"I'm Sheby, a dedicated AI developer and Data Scientist passionate about integrating smart AI solutions like ChatGPT into everyday business workflows."
-}
+  subtitle_top: "The road to freedom starts from here",
+  mainTitleWhite: "Welcome. Step into my world of",
+  mainTitleBlue: "AI Innovation.",
+  description:
+    "I'm Sheby, a dedicated AI developer and Data Scientist passionate about integrating smart AI solutions like ChatGPT into everyday business workflows.",
+};
 
 const sample_projects = [
   {
@@ -72,60 +75,101 @@ const sample_projects = [
   },
 ];
 const SOCIAL_LINKS = {
-  upwork:"https://www.upwork.com/freelancers/~01f3b3d827a29ef7a3",
-  github:"https://github.com/shabeeb248",
+  upwork: "https://www.upwork.com/freelancers/~01f3b3d827a29ef7a3",
+  github: "https://github.com/shabeeb248",
   skype: "https://join.skype.com/invite/wZGQ0atB3SwU",
   whatsapp: "https://wa.me/918113057338",
   linkedin: "https://www.linkedin.com/in/muhammed-shabeeb248/",
-}
+};
 
 const socials = [
-    {
-      title: "Linkedin",
-      icon: (
-        <IconBrandLinkedin className="h-full w-full text-blue-500" />
-      ),
-      href: SOCIAL_LINKS.linkedin
-    },
- 
-    {
-      title: "Whatsapp",
-      icon: (
-        <IconBrandWhatsapp className="h-full w-full text-green-400" />
-      ),
-      href:SOCIAL_LINKS.whatsapp,
-    },
-    {
-      title: "Skype",
-      icon: (
-        <IconBrandSkype className="h-full w-full text-blue-300" />
-      ),
-      href: SOCIAL_LINKS.skype,
-    },
-    {
-      title: "Github",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-300" />
-      ),
-      href: SOCIAL_LINKS.github,
-    },
-    {
-        title: "Upwork",
-        icon: (
-          <IconBrandUpwork className="h-full w-full text-green-400" />
-        ),
-        href: SOCIAL_LINKS.upwork,
-      },
-  ];
+  {
+    title: "Linkedin",
+    icon: <IconBrandLinkedin className="h-full w-full text-blue-500" />,
+    href: SOCIAL_LINKS.linkedin,
+  },
+
+  {
+    title: "Whatsapp",
+    icon: <IconBrandWhatsapp className="h-full w-full text-green-400" />,
+    href: SOCIAL_LINKS.whatsapp,
+  },
+  {
+    title: "Skype",
+    icon: <IconBrandSkype className="h-full w-full text-blue-300" />,
+    href: SOCIAL_LINKS.skype,
+  },
+  {
+    title: "Github",
+    icon: <IconBrandGithub className="h-full w-full text-neutral-300" />,
+    href: SOCIAL_LINKS.github,
+  },
+  {
+    title: "Upwork",
+    icon: <IconBrandUpwork className="h-full w-full text-green-400" />,
+    href: SOCIAL_LINKS.upwork,
+  },
+];
+
+const image = 'https://imageio.forbes.com/specials-images/imageserve/649e548f60d84051f9324232/Businessman-using-tech-devices-and-icons-thin-line-interface/0x0.jpg?format=jpg&crop=3789,2525,x684,y2,safe&width=960'
+
+const SERVICES = [
+  {
+    title: "AI-Powered Workflow Automation with ChatGPT",
+    component:<WorkflowAutomation/>,
+    path:'ai-powered-workflow-automation-with-chatgpt',
+    description:
+      "Maximize efficiency and unlock new opportunities by integrating ChatGPT into your workflows, automating tasks, and transforming your business processes.",
+  image:'service1.jpg',
+    bg:'#000000',
+    fg:'#ffffff',
+    gradientBg:"bg-gradient-to-br from-gray-900 to-gray-800",
+  },
+  
+  {
+    title: "Chatbot Development & Website Integration",
+    component:<ChatbotDevelopment/>,
+
+    path:"chatbot-development-and-website-integration",
+    description:
+      "Revolutionize user interaction with custom AI chatbots, seamlessly integrated into your website to boost engagement, automate processes, and enhance customer experience.",
+ image,     bg:'#8F96D4',
+    fg:'#000',
+    gradientBg:"bg-gradient-to-br from-blue-600 to-sky-400",
+  },
+  {
+    title: "LLM-Based Tools for Business Innovation",
+    component:<LLMToolsForBusiness/>,
+    path:'llm-based-tools-for-business-innovation',
+    description:
+      "Drive business transformation with cutting-edge LLM-based solutions, offering tailored AI tools that increase efficiency, spark innovation, and deliver measurable results.",
+    md_file: "service2_custom_ai_llm_tools.md",
+  image:'service3.jpg',
+     bg:'#C493C8',
+    fg:'#000',
+    gradientBg:"bg-gradient-to-br from-indigo-500 to-indigo-400",
+  },
+  {
+    title: "Custom Data Dashboards",
+    component:<DataDashboards/>,
+    path:'custom-data-dashboards',
+    description:
+      "Gain full control over your data with tailored, real-time dashboards that track KPIs, visualize trends, and turn insights into smarter business decisions.",
+    md_file: "service3_Customized Data Dashboards.md",
+image,     bg:'#000000',
+    fg:'#000',
+    gradientBg:"bg-gradient-to-br from-cyan-700 to-blue-300",
+  },
+];
+
 
 export const DATA = {
-  socials:{
-    icons:socials,
-    links:SOCIAL_LINKS
+  socials: {
+    icons: socials,
+    links: SOCIAL_LINKS,
   },
-  hero:heroData,
-  welcome:welcomeSection,
-  projects:sample_projects
-
-}
-
+  hero: heroData,
+  welcome: welcomeSection,
+  projects: sample_projects,
+  services: SERVICES,
+};

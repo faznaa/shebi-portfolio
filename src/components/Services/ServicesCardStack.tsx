@@ -87,6 +87,7 @@ const ServiceCardStack: React.FC<ServicesProps> = ({ services, offsets, rangeSta
           const targetScale = 1 - ((services.length - index) * 0.05); // Dynamically calculate scaling based on the number of services
           return (
             <ServiceCard
+            path={service.path}
               key={index}
               index={index}
               bg={service.bg}
@@ -94,7 +95,7 @@ const ServiceCardStack: React.FC<ServicesProps> = ({ services, offsets, rangeSta
               title={service.title}
               subtitle={service.subtitle}
               description={service.description}
-              src={service.images[0]}
+              src={service.image}
               progress={scrollYProgress}
               range={[rangeStart + index * 0.25, rangeEnd]}
               targetScale={targetScale}
