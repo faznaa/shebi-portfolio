@@ -6,7 +6,7 @@ import { DATA } from "@/lib/data";
 export default function Intro() {
   return (
     <div
-      className="h-screen bg-slate-950 relative"
+      className="h-screen overflow-hidden bg-slate-950 relative"
       style={{
         backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
       }}

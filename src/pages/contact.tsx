@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function ContactPage() {
   return (
-    <div>
+    <div className='h-screen overflow-hidden'>
         <Navbar/>
         <ContactUs/>
     </div>

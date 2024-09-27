@@ -32,7 +32,7 @@ export default function Description() {
       },
   ];
   return (
-    <div className="flex flex-col items-center justify-center h-[40rem] mt-20 bg-slate-900 w-full">
+    <div className="flex flex-col items-center justify-center h-[30rem]  bg-slate-900 w-full">
       <p className="text-neutral-200 text-xs sm:text-base   ">
         {DATA.welcome.subtitle_top}
       </p>
