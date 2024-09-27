@@ -7,28 +7,32 @@ export default function Navbar() {
   const items = [
     {
       title: "Home",
+      href: "/",
       action: () => router.push('/')
     },
     {
       title: "Projects",
+      href: "/journey",
       action: () => router.push('/journey')
     },
     {
       title: "Services",
+      href: "/services",
       action: () => router.push('/services')
     },
     {
       title: "Blog",
+      href: "/journey",
       action: () => router.push('/journey')
 
     },
     {
       title: "Journey",
-      href: "#",
+      href: "/journey",
       action: () => router.push('/journey')
     },
     {
-      title: "Contact Me",
+      title: "Contact",
       href: "#contact",
       action:() => scrollToId('contact')
     },
@@ -76,9 +80,11 @@ export default function Navbar() {
     >
       <div className="flex justify-center items-center gap-x-10 h-16">
         {items.map((item) => (
-          <button onClick={() =>item?.action()} className="text-white text-sm tracking-normal">
-            {item.title}
-          </button>
+         item?.href ?   <Link href={item.href}  className="text-white hover:text-blue-500 text-sm tracking-normal">
+         {item.title}
+       </Link> :<button onClick={() =>item?.action()} className="text-white hover:text-blue-500 text-sm tracking-normal">
+         {item.title}
+       </button>
         ))}
       </div>
     </nav>

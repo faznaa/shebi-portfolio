@@ -162,7 +162,56 @@ image,     bg:'#000000',
     gradientBg:"bg-gradient-to-br from-cyan-700 to-blue-300",
   },
 ];
-
+const testimonials = [
+  {
+    quote:
+      "Incredibly skilled at building an AI assistant for interviewing clients in advance of legal work. Shabeeb 'got it' intuitively about what the application was intended to do, and executed a well-designed interface that communicated the 'brand' effectively, while guiding the potential client through an extensive list of questions and intelligently created follow-up questions. Way beyond expectations! A+++",
+    name: "Russell Collins, PsyD",
+    title: "Founder, Collins Family Mediation",
+  },
+  {
+    quote:
+      "I was entrusted with the development of complex AI software and I couldn't be happier with the result. From the beginning, Shabeeb demonstrated an excellent understanding of my needs and provided valuable suggestions that significantly improved the quality of the final product. He is a reliable and competent professional for software development projects.",
+    name: "Luigi Napoletano",
+    title: "Founder & CEO, WAAB Software",
+  },
+  {
+    quote:
+      "Exceptional work! Shabeeb delivered outstanding results within the agreed timeframe. Excellent communication and attention to detail. Highly recommended!",
+    name: "Manzoor Patel",
+    title: "CEO, Seyfertsoft",
+  },
+  {
+    quote:
+      "Choosing Shabeeb to help us design and engineer our healthtech app demo was a great decision. He quickly understood the concept and did a great job.  Shabeeb was an expert at helping us understand the limitations to AI and help structure our prompts in a way to get the desired output. Would highly recommend to anyone looking to build an AI-involved app.",
+    name: "Daniel Lapidus",
+    title: "Founder, ResurgeMed",
+  },
+  {
+    quote:
+      "Shabeeb completed the project to an extremely high standard and finished in just a couple of days. The app was exactly what we needed, and he was very helpful and patient in assisting me with setting it up. I would definitely recommend Shabeeb for future projects.",
+    name: "Mina Mandor",
+    title: "Upwork Client",
+  },
+  {
+    quote:
+      "Shabeeb has been an invaluable asset to our team. Starting as a Data Scientist, he helped build machine learning models and R&D scripts for text processing. He later tested and prototyped with new LLM models and contributed as a data engineer, building Python backends for AI applications. We highly recommend him and look forward to future collaborations!",
+    name: "Yash Paliwal",
+    title: "Founder & CEO, PublicSquare",
+  },
+  {
+    quote:
+      "Shabeeb's LLM tool for web scraping and automatic blog writing has been a game-changer for us. It efficiently scrapes relevant data and generates high-quality blog content with minimal input, saving us hours of manual work. The tool is intuitive, fast, and delivers professional results that improve our SEO strategy. Highly recommended for anyone looking to automate their content creation process!",
+    name: "Sabas CK",
+    title: "Founder & CEO, NEXWAVE",
+  },
+  {
+    quote:
+      "Shabeeb developed a highly effective chatbot for our website, which has significantly improved user engagement and streamlined customer support. The chatbot handles queries seamlessly, providing quick and accurate responses. It integrates perfectly with our site, enhancing the overall user experience and freeing up our team for more complex tasks. We couldn't be happier with the results!",
+    name: "Abu Swalih",
+    title: "Founder, FLYERBIN",
+  },
+];
 
 export const DATA = {
   socials: {
@@ -173,5 +222,6 @@ export const DATA = {
   welcome: welcomeSection,
   projects: sample_projects,
   services: SERVICES,
-  journey:myJourney
+  journey:myJourney,
+  testimonials
 };
