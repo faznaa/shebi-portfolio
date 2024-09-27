@@ -120,7 +120,7 @@ const SERVICES = [
     path:'ai-powered-workflow-automation-with-chatgpt',
     description:
       "Maximize efficiency and unlock new opportunities by integrating ChatGPT into your workflows, automating tasks, and transforming your business processes.",
-  image:'service1.jpg',
+  image:'/service1.jpg',
     bg:'#000000',
     fg:'#ffffff',
     gradientBg:"bg-gradient-to-br from-gray-900 to-gray-800",
@@ -144,7 +144,7 @@ const SERVICES = [
     description:
       "Drive business transformation with cutting-edge LLM-based solutions, offering tailored AI tools that increase efficiency, spark innovation, and deliver measurable results.",
     md_file: "service2_custom_ai_llm_tools.md",
-  image:'service3.jpg',
+  image:'/service3.jpg',
      bg:'#C493C8',
     fg:'#000',
     gradientBg:"bg-gradient-to-br from-indigo-500 to-indigo-400",

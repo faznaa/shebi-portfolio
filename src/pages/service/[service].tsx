@@ -20,7 +20,7 @@ export default function ServiceSingle() {
             <div className='pt-10 sm:px-20'>
             <div className='text-6xl font-semibold mt-10'>{data.title}</div>
             <motion.img
-              src={`/${data.image}`}
+              src={`${data.image}`}
               alt={data.title}
               className="w-full h-full object-cover rounded-xl sm:max-w-4xl my-6"
               

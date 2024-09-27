@@ -14,6 +14,15 @@ function SignupFormDemo() {
     e.preventDefault();
     console.log("Form submitted");
   };
+  const [fields, setFields] = React.useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const updateFields = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFields({ ...fields, [e.target.id]: e.target.value });
+  }
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:px-8 shadow-input bg-white dark:bg-black">
       {/* <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
@@ -28,21 +37,21 @@ function SignupFormDemo() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">Name</Label>
-            <Input id="name" placeholder="Elon Musk" type="text" />
+            <Input id="name" placeholder="Elon Musk" type="text" value={fields.name} onChange={updateFields} />
           </LabelInputContainer>
         
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="me@yourcompany.com" type="email" />
+          <Input id="email" placeholder="me@yourcompany.com" type="email" value={fields.email} onChange={updateFields} />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="password">Subject</Label>
-          <Input id="subject" placeholder="subject" type="text" />
+          <Input id="subject" placeholder="subject" type="text" value={fields.subject} onChange={updateFields}/>
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="twitterpassword">Your message</Label>
-          <Input id="message" placeholder="Type your message.." type="textarea" />
+          <Input id="message" placeholder="Type your message.." type="textarea" value={fields.message} onChange={updateFields} />
 
         </LabelInputContainer>
 

@@ -15,7 +15,7 @@ export default function Navbar() {
     },
     {
       title: "Services",
-      action: () => router.push('/journey')
+      action: () => router.push('/services')
     },
     {
       title: "Blog",
