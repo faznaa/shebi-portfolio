@@ -8,17 +8,15 @@ export default function Description() {
       text: "Welcome.",
     },
     {
-      text: "Step",
+      text: "to",
     },
     {
-      text: "into",
+      text: "a",
     },
     {
-      text: "my",
+      text: "world",
     },
-    {
-        text: "world",
-      },
+
       {
         text: "of",
       },
