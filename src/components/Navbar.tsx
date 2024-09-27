@@ -59,6 +59,7 @@ export default function Navbar() {
     }
     } else {
       router.push('/#contact')
+      // hello
     }
     
   };
