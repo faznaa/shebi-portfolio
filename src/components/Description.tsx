@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 export default function Description() {
   const words = [
     {
-      text: "Welcome.",
+      text: "Welcome",
     },
     {
       text: "to",
     },
     {
-      text: "a",
+      text: "the",
     },
     {
       text: "world",

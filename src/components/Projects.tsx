@@ -2,6 +2,8 @@ import { IconBrandAdobe, IconBrandFacebook } from "@tabler/icons-react";
 import React from "react";
 import { motion } from "framer-motion";
 import { DATA } from "@/lib/data";
+import Link from "next/link";
+import { getPathFromTitle } from "@/lib/utils";
 
 const shimmerAnimation = `
 @keyframes shimmer {
@@ -17,13 +19,15 @@ export default function Projects() {
   return <div className="w-screen h-full bg-black rounded-t-[5rem]">
           <style>{shimmerAnimation}</style>
     <div className="w-full sm:max-w-7xl sm:px-10 mx-auto py-20 ">
-    <h1 className="text-6xl text-center font-bold my-16 pb-20 text-white">Some of my <span className="text-blue-500">projects</span></h1>
+    <div className="text-6xl text-center font-bold my-16 pb-20 text-white">Some of my <span className="text-blue-500">projects</span></div>
+  
     <div className="grid grid-cols-3 gap-4 gap-y-10">
-      {DATA.projects.map((project, index) => (
+      {DATA.projects.filter(i => i.isFeatured).map((project, index) => (
+      <Link href={`/project/${getPathFromTitle(project.title)}`} target="_blank">
        <motion.div
        whileHover={{y:-10}}
        transition={{duration:0.2}}
-       key={index}
+       key={project.title}
        className="p-[2px] bg-gradient-to-t from-neutral-950 to-neutral-900 rounded-lg shadow-lg shadow-gray-500/50 sm:max-w-sm"
        style={{
          backgroundImage:
@@ -37,16 +41,16 @@ export default function Projects() {
            <motion.img
              whileHover={{ scale: 1.05 }}
              transition={{ duration: 0.3 }}
-             src={project.image}
+             src={`/projects/${project.main_image}`}
              alt={project.title}
              className="w-full h-64 object-cover"
            />
 
            {/* White shadow gradient */}
-           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent rounded-lg"></div>
+           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent rounded-lg"></div>
          </div>
 
-         <div className="h-80 flex flex-col justify-between">
+         <div className="h-64 flex flex-col justify-between">
            <div>
              <h3 className="text-2xl text-gray-200 font-semibold mt-4">
                {project.title}
@@ -56,14 +60,34 @@ export default function Projects() {
              </p>
            </div>
            <div className="flex gap-x-2">
-             <IconBrandFacebook className="h-6 w-6 text-blue-500" />
-             <IconBrandAdobe className="h-6 w-6 text-blue-500" />
+             {project.keywords?.map((tag: string) => (
+               <span
+                 key={tag}
+                 className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded-lg"
+               >
+                 {tag}
+               </span>
+             ))}
            </div>
          </div>
        </div>
-     </motion.div>
+     </motion.div></Link>
       ))}
     </div>
+    {/* <div className="flex justify-end mt-10 mb-12 z-20 pr-2 text-blue-400 "> */}
+    {/* </div> */}
+    <div className="relative mt-6">
+      <div className="absolute w-full ">
+        <div className="flex w-full justify-end">
+          <Link href="/projects" className="bg-blue-600 text-white px-3 py-2 rounded-lg" target="_blank">
+          See more projects
+          </Link>
+        </div>
+      </div>
+
+    </div>
+   
   </div>
+  
   </div>
 }

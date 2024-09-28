@@ -51,6 +51,7 @@ const Input = React.forwardRef<any,any>(
           className
         )}
         rows={3}
+        placeholder={props.placeholder}
         value={props.value}
         onChange={(e) => props.setValue(e.target.value)}
       />:<input

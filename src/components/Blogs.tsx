@@ -1,29 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import BlogCard from './BlogCard'
+import { DATA } from '@/lib/data'
 export default function Blogs() {
-    const  blogs = [
-        {
-            title:'How Ai works ?',
-            description:'How every place in india is like',
-            image:'https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg',
-            url:'#'
-        },
-        {
-            title:'How Ai works ?',
-            description:'How every place in india is like',
-            image:'https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg',
-            url:'#'
-        },
-        {
-            title:'How Ai works ?',
-            description:'How every place in india is like',
-            image:'https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg',
-            url:'#'
-        }
-    ]
+    
   return (
-   <div className='w-screen bg-black'>
+   <div className='w-screen bg-black pt-10'>
      <div className='min-h-screen bg-black text-white sm:max-w-7xl mx-auto py-10'>
         <motion.h1 className='text-4xl font-bold text-white text-center pb-6'>
             Know more about <span className='text-blue-500'>me!</span>
@@ -33,7 +15,7 @@ export default function Blogs() {
         </motion.h3>
 
         <div className='grid sm:grid-cols-3 gap-x-6'>
-            {blogs.map((blog)=>(
+            {DATA.blogs.map((blog)=>(
                 <BlogCard key={blog.title} {...blog}/>
             ))}
         </div>

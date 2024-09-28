@@ -17,6 +17,8 @@ import {
 
 import React from "react";
 import { myJourney } from "./journeydata";
+import { PROJECTS } from "./projects";
+import { BLOGS } from "./blog";
 
 export default function MainDummy() {
   return <div></div>;
@@ -165,7 +167,7 @@ image,     bg:'#000000',
 const testimonials = [
   {
     quote:
-      "Incredibly skilled at building an AI assistant for interviewing clients in advance of legal work. Shabeeb 'got it' intuitively about what the application was intended to do, and executed a well-designed interface that communicated the 'brand' effectively, while guiding the potential client through an extensive list of questions and intelligently created follow-up questions. Way beyond expectations! A+++",
+      "Incredibly skilled at building an AI assistant for interviewing clients in advance of legal work. Shabeeb 'got it' intuitively about what the application was intended to do, and executed a well-designed interface that communicated the 'brand' effectively, while guiding the potential client through an extensive list of questions and intelligently created follow-up questions. Way beyond expectations! ",
     name: "Russell Collins, PsyD",
     title: "Founder, Collins Family Mediation",
   },
@@ -220,8 +222,11 @@ export const DATA = {
   },
   hero: heroData,
   welcome: welcomeSection,
-  projects: sample_projects,
+  // projects: sample_projects,
   services: SERVICES,
   journey:myJourney,
-  testimonials
+  testimonials,
+  projects:PROJECTS,
+  project_keywords_all:Array.from(new Set(PROJECTS.map(p => p.keywords).flat())),
+  blogs:BLOGS
 };

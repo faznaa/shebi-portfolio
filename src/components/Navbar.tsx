@@ -12,7 +12,7 @@ export default function Navbar() {
     },
     {
       title: "Projects",
-      href: "/journey",
+      href: "/projects",
       action: () => router.push('/journey')
     },
     {
@@ -78,6 +78,12 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
+      <div className="flex justify-start">
+        <div className="absolute top-3 left-3">
+          <img src="/slogo.png" alt="Logo" className="w-10 h-10" />
+        </div>
+        
+      </div>
       <div className="flex justify-center items-center gap-x-10 h-16">
         {items.map((item) => (
          item?.href ?   <Link href={item.href}  className="text-white hover:text-blue-500 text-sm tracking-normal">
@@ -87,6 +93,7 @@ export default function Navbar() {
        </button>
         ))}
       </div>
+     
     </nav>
   );
 }

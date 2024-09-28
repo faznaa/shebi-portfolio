@@ -2,6 +2,7 @@ import { LampContainer } from "@/ui/lamp";
 import React from "react";
 import { motion } from "framer-motion";
 import { DATA } from "@/lib/data";
+import { IconChevronDown } from "@tabler/icons-react";
 
 export default function Intro() {
   return (
@@ -63,6 +64,13 @@ export default function Intro() {
           >
             {DATA.hero.subtitle}
           </motion.h1>
+          <motion.div 
+            initial={{ opacity: 0.5, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="absolute -bottom-32"
+            >
+              <IconChevronDown className="text-white w-16 h-16 animate-bounce" />
+            </motion.div>
         </LampContainer>
       </motion.div>
     </div>
