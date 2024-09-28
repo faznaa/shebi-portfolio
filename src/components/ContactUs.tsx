@@ -20,10 +20,10 @@ import Link from 'next/link';
 export default function ContactUs() {
     
   return (
-   <div className='h-screen' id="contact">
+   <div className='' id="contact">
      <AuroraBackground>
-        <div className='z-20 grid sm:grid-cols-2 gap-x-4 h-screen py-10 sm:max-w-6xl mx-auto sm:py-16'>
-        <motion.div className='pt-12'
+        <div className='z-20 h-full grid grid-cols-1 sm:grid-cols-2 gap-x-4  py-10 sm:max-w-6xl mx-auto sm:py-16'>
+        <motion.div className='pt-12 px-6 sm:px-0'
         initial={{opacity:0.5,x:-100}}
         whileInView={{opacity:1,x:0}}
         transition={{duration:0.5}}
@@ -40,7 +40,7 @@ export default function ContactUs() {
             <IconBrandUpwork className='h-10 w-10 text-green-400' />
           </Link>
         </button>
-        <div className="flex items-start justify-start h-[35rem] py-28 ">
+        <div className="flex items-start justify-start h-[10rem] sm:h-[35rem] py-4 sm:py-28 ">
       <FloatingDock
         mobileClassName="" // only for demo, remove for production
         items={DATA.socials.icons}

@@ -23,7 +23,7 @@ export default function ProjectsAll() {
     <div>
         <Navbar/>
         <div
-      className="w-full bg-neutral-950 font-sans md:px-10"
+      className="w-full bg-neutral-950 font-sans md:px-10 px-4 sm:px-0"
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
        <FadeIn>
@@ -49,7 +49,7 @@ export default function ProjectsAll() {
           }
         }}
         className={cn(
-          "px-3 py-1.5  rounded-lg text-[17px] font-medium  text-white/50 bg-transparent cursor-pointer shadow-none border border-white/50 transition duration-500 ease-in-out focus:outline-none hover:text-white hover:bg-[#008cff] hover:border-[#008cff] hover:shadow-[0_0_5px_#ffffff,0_0_10px_#ffffff,0_0_20px_#ffffff,0_0_5px_#008cff,0_0_20px_#008cff,0_0_50px_#008cff,0_0_100px_#008cff]",
+          "px-3 py-1.5  rounded-lg text-sm sm:text-[17px] font-medium  text-white/50 bg-transparent cursor-pointer shadow-none border border-white/50 transition duration-500 ease-in-out focus:outline-none hover:text-white hover:bg-[#008cff] hover:border-[#008cff] hover:shadow-[0_0_5px_#ffffff,0_0_10px_#ffffff,0_0_20px_#ffffff,0_0_5px_#008cff,0_0_20px_#008cff,0_0_50px_#008cff,0_0_100px_#008cff]",
           selectedKeywords.includes(keyword) ? "bg-blue-500 text-white" : "bg-transparent"
         )}>
           {keyword}
@@ -64,7 +64,7 @@ export default function ProjectsAll() {
       )}
       </div>
 
-      <div className="grid grid-cols-3 gap-4 gap-y-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 gap-y-10 max-w-7xl mx-auto">
       {filteredProjects.map((project:any, index:number) => (
       <Link href={`/project/${getPathFromTitle(project.title)}`} target="_blank">
        <motion.div
@@ -93,7 +93,7 @@ export default function ProjectsAll() {
            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent rounded-lg"></div>
          </div>
 
-         <div className="h-80 flex flex-col justify-between">
+         <div className="h-64 flex flex-col justify-between">
            <div>
              <h3 className="text-2xl text-gray-200 font-semibold mt-4">
                {project.title}
@@ -103,8 +103,14 @@ export default function ProjectsAll() {
              </p>
            </div>
            <div className="flex gap-x-2">
-             <IconBrandFacebook className="h-6 w-6 text-blue-500" />
-             <IconBrandAdobe className="h-6 w-6 text-blue-500" />
+             {project.keywords?.map((tag: string) => (
+               <span
+                 key={tag}
+                 className="text-xs text-gray-400 bg-gray-800 px-2 py-1 rounded-lg"
+               >
+                 {tag}
+               </span>
+             ))}
            </div>
          </div>
        </div>

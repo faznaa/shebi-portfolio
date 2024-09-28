@@ -22,7 +22,7 @@ export default function Navbar() {
     },
     {
       title: "Blog",
-      href: "/journey",
+      href: "/blogs",
       action: () => router.push('/journey')
 
     },
@@ -79,8 +79,8 @@ export default function Navbar() {
       }`}
     >
       <div className="flex justify-start">
-        <div className="absolute top-3 left-3">
-          <img src="/slogo.png" alt="Logo" className="w-10 h-10" />
+        <div className="absolute top-4 left-4">
+          <Link href="/"><img src="/slogo.png" alt="Logo" className="w-8 h-8" /></Link>
         </div>
         
       </div>

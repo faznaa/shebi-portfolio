@@ -19,9 +19,9 @@ export default function Projects() {
   return <div className="w-screen h-full bg-black rounded-t-[5rem]">
           <style>{shimmerAnimation}</style>
     <div className="w-full sm:max-w-7xl sm:px-10 mx-auto py-20 ">
-    <div className="text-6xl text-center font-bold my-16 pb-20 text-white">Some of my <span className="text-blue-500">projects</span></div>
+    <div className="text-4xl sm:text-6xl text-center font-bold my-16 sm:pb-20 text-white">Some of my <span className="text-blue-500">projects</span></div>
   
-    <div className="grid grid-cols-3 gap-4 gap-y-10">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 gap-y-10 px-4 sm:px-0">
       {DATA.projects.filter(i => i.isFeatured).map((project, index) => (
       <Link href={`/project/${getPathFromTitle(project.title)}`} target="_blank">
        <motion.div
@@ -76,8 +76,8 @@ export default function Projects() {
     </div>
     {/* <div className="flex justify-end mt-10 mb-12 z-20 pr-2 text-blue-400 "> */}
     {/* </div> */}
-    <div className="relative mt-6">
-      <div className="absolute w-full ">
+    <div className="relative mt-6 ">
+      <div className="absolute w-full px-4 sm:px-0 ">
         <div className="flex w-full justify-end">
           <Link href="/projects" className="bg-blue-600 text-white px-3 py-2 rounded-lg" target="_blank">
           See more projects

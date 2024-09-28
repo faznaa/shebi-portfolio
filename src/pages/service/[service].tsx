@@ -17,12 +17,12 @@ export default function ServiceSingle() {
     <div className='bg-black text-gray-300 min-h-screen'>
         <Navbar/>
         {data && (
-            <div className='pt-10 sm:px-20'>
-            <div className='text-6xl font-semibold mt-10'>{data.title}</div>
+            <div className='pt-10  sm:px-20'>
+            <div className='text-4xl sm:text-6xl px-4 sm:px-0 font-semibold mt-10'>{data.title}</div>
             <motion.img
               src={`${data.image}`}
               alt={data.title}
-              className="w-full h-full object-cover rounded-xl sm:max-w-4xl my-6"
+              className="w-full h-full px-4 sm:px-0 object-cover rounded-xl sm:max-w-4xl my-6"
               
             />
             {data.component}

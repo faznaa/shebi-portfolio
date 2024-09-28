@@ -116,7 +116,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         // id={`service-${index}`}
       >
         <motion.div
-          className={`w-full sm:w-3/4 h-[75%]  grid grid-cols-2 items-center gap-x-6 sm:gap-x-20 p-3 sm:p-12 rounded-3xl overflow-hidden ${gradientBg}`}
+          className={`w-full sm:w-3/4 h-[75%]  grid grid-cols-1 sm:grid-cols-2 items-center gap-x-6 sm:gap-x-20 p-3 sm:p-12 rounded-3xl overflow-hidden ${gradientBg}`}
           style={{
             backgroundColor: bg,
             color: textColor,
@@ -149,7 +149,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           {/* Text content */}
           <FadeIn>
             <motion.div className="space-y-4" style={{skewY:index%2==0?1:-1}}>
-              <h3 className="text-4xl font-normal">{title}</h3>
+              <h3 className="text-2xl sm:text-4xl font-normal pt-6 sm:pt-0">{title}</h3>
               {/* <h4 className='text-2xl font-extralight'>{subtitle}</h4> */}
               <p className="font-light py-4">{description.slice(0, 200)}</p>
               <Link target="_blank" href={`service/${path}`} className="px-4 py-2 rounded-3xl bg-gray-100 text-black">

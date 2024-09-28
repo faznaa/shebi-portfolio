@@ -20,7 +20,7 @@ export default function ProjectSingle() {
     <div className='bg-black text-gray-300 min-h-screen pb-10 sm:pb-20'>
         <Navbar/>
         {data?.title && (
-            <div className='pt-10 sm:px-20'>
+            <div className='pt-10 px-4 sm:px-20'>
             <div className='text-6xl font-semibold mt-10'>{data.title}</div>
             {/* Tags will go here */}
             <div className='flex justify-start gap-x-2 my-4'>
