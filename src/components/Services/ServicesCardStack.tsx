@@ -65,7 +65,7 @@ const ServiceCardStack: React.FC<ServicesProps> = ({ services, offsets, rangeSta
         style={{ opacity }}
       >
         <FadeIn>
-        <h1 className="text-6xl text-center font-bold my-16 pb-20 text-white">Services <span className="text-blue-500">I offer</span></h1>
+        <h1 className="text-4xl sm:text-6xl text-center font-bold my-16 pb-20 text-white">Services <span className="text-blue-500">I offer</span></h1>
         </FadeIn>
       
       {/* <div className='flex w-full items-center justify-center gap-x-6 uppercase text-sm'>

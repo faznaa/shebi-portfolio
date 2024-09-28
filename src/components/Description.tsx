@@ -43,7 +43,7 @@ export default function Description() {
         duration: 0.8,
         ease: "easeInOut",
       }}
-      className="flex flex-col md:flex-row space-y-4 mb-0 md:space-y-0 space-x-0 md:space-x-4 text-gray-400 max-w-3xl text-lg text-center pt-8">
+      className="flex px-2 flex-col md:flex-row space-y-4 mb-0 md:space-y-0 space-x-0 md:space-x-4 text-gray-400 max-w-3xl text-base sm:text-lg text-center pt-8">
         
         I'm Sheby, a dedicated AI developer and Data Scientist passionate about integrating smart AI solutions like ChatGPT into everyday business workflows.
       </motion.div>

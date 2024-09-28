@@ -84,9 +84,9 @@ export default function Navbar() {
         </div>
         
       </div>
-      <div className="flex justify-center items-center gap-x-10 h-16">
+      <div className="flex justify-center items-center gap-x-3 sm:gap-x-10 h-16">
         {items.map((item) => (
-         item?.href ?   <Link href={item.href}  className="text-white hover:text-blue-500 text-sm tracking-normal">
+         item?.href ?   <Link href={item.href}  className="text-white hover:text-blue-500  text-xs sm:text-sm tracking-normal">
          {item.title}
        </Link> :<button onClick={() =>item?.action()} className="text-white hover:text-blue-500 text-sm tracking-normal">
          {item.title}

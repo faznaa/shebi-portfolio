@@ -116,7 +116,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         // id={`service-${index}`}
       >
         <motion.div
-          className={`w-3/4 h-[75%]  grid grid-cols-2 items-center gap-x-12 sm:gap-x-20 p-12 rounded-3xl overflow-hidden ${gradientBg}`}
+          className={`w-full sm:w-3/4 h-[75%]  grid grid-cols-2 items-center gap-x-6 sm:gap-x-20 p-3 sm:p-12 rounded-3xl overflow-hidden ${gradientBg}`}
           style={{
             backgroundColor: bg,
             color: textColor,
