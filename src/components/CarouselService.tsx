@@ -21,11 +21,11 @@ const CarouselService = ({ data }:{ data: typeof DATA.services}) => {
 
   return (
     <div className="relative w-full  mx-auto overflow-hidden">
-      <div className="relative w-full h-[500px]">
+      <div className="relative w-full h-[530px]">
         <AnimatePresence >
           
           <div className='w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col rounded-sm p-4'>
-            <motion.img src={data[currentIndex].image} alt={`Slide ${currentIndex + 1}`} className="w-full h-full object-cover rounded-lg" />
+            <motion.img src={data[currentIndex].image} alt={`Slide ${currentIndex + 1}`} className="w-full h-56 object-cover rounded-lg" />
             <motion.div className="space-y-4" >
               <h3 className="text-2xl sm:text-4xl font-normal pt-6 sm:pt-0">{data[currentIndex].title}</h3>
               {/* <h4 className='text-2xl font-extralight'>{subtitle}</h4> */}
