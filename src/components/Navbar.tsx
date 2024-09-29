@@ -67,6 +67,7 @@ export default function Navbar() {
     }
     
   };
+  
 
 
   return (
@@ -84,13 +85,19 @@ export default function Navbar() {
         </div>
         
       </div>
-      <div className="flex justify-center items-center gap-x-3 sm:gap-x-10 h-16">
-        {items.map((item) => (
+      <div className="hidden sm:flex justify-center items-center gap-x-3 sm:gap-x-10 h-16">
+        {items?.map((item) => (
          item?.href ?   <Link href={item.href}  className="text-white hover:text-blue-500  text-xs sm:text-sm tracking-normal">
          {item.title}
        </Link> :<button onClick={() =>item?.action()} className="text-white hover:text-blue-500 text-sm tracking-normal">
          {item.title}
        </button>
+        ))}
+      </div>
+      <div className="flex sm:hidden justify-center items-center gap-x-3 sm:gap-x-10 h-16">
+        {items?.filter((item) => item.href!=='/').map((item) => (<Link href={item.href}  className="text-white hover:text-blue-500  text-xs sm:text-sm tracking-normal">
+         {item.title}
+       </Link>
         ))}
       </div>
      

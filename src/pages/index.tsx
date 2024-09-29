@@ -11,6 +11,7 @@ import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials";
 import MainService from "@/components/Services/MainService";
 import Projects from "@/components/Projects";
+import MobileHero from "@/components/MobileHero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,15 +20,20 @@ export default function Home() {
    <div className="bg-neutral-950 min-h-screen w-screen overflow-hidden h-full">
     <Navbar/>
     {/* <div className="h-screen bg-black mt-32"></div> */}
-    <Intro/>
-    <Description/>
-    <MainService/>
-    <Projects/>
-    {/* <Skills/> */}
-    <Testimonials/>
-    {/* <Blogs/> */}
-    <ContactUs/>
-    <Thanks/>
+    <div className="hidden sm:block">
+      <Intro/>
+      <Description/>
+      <MainService/>
+      <Projects/>
+      {/* <Skills/> */}
+      <Testimonials/>
+      {/* <Blogs/> */}
+      <ContactUs/>
+      <Thanks/>
+    </div>
+    <div className="block sm:hidden">
+      <MobileHero />
+    </div>
    </div>
   );
 }
