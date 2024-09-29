@@ -5,13 +5,13 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 import Link from "next/link";
 
-export default function BlogCard({
+export default function ServiceCardSeparate({
     title,
     description,
-    image,md_file,read_time}:any) {
+    image,path}:any) {
   return (
     <CardContainer className="inter-var w-full">
-      <CardBody className=" relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2]  w-auto sm:w-[25rem] h-auto rounded-xl p-6 border  ">
+      <CardBody className=" relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2]  w-auto sm:w-[36rem] h-auto rounded-xl p-6 border  ">
         <CardItem
           
           translateZ="50"
@@ -28,7 +28,7 @@ export default function BlogCard({
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <img
-            src={`/blogs/${image}`}
+            src={`${image}`}
             height="1000"
             width="1000"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -39,19 +39,13 @@ export default function BlogCard({
           <CardItem
             translateZ={20}
             as={Link}
-            href={`/blog/${md_file?.replace('.md', '')}`}
+            href={`/service/${path}`}
             target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            className="px-4 py-2 rounded-xl text-xs font-normal text-white font-semibold"
           >
-            Read now →
+            Know more →
           </CardItem>
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Time {read_time}
-          </CardItem>
+          
         </div>
       </CardBody>
     </CardContainer>

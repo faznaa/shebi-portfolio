@@ -109,7 +109,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         className={`w-full h-screen flex justify-center items-center overflow-hidden fixed`}
         style={{
           top: `calc(1% + ${index * 32}px)`,
-          zIndex: index,
+          zIndex: index+1,
           translateY: containerTranslateY,
           // opacity: opacity,
         }}
@@ -152,9 +152,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               <h3 className="text-2xl sm:text-4xl font-normal pt-6 sm:pt-0">{title}</h3>
               {/* <h4 className='text-2xl font-extralight'>{subtitle}</h4> */}
               <p className="font-light py-4">{description.slice(0, 200)}</p>
-              <Link target="_blank" href={`service/${path}`} className="px-4 py-2 rounded-3xl bg-gray-100 text-black">
+              <div className="relative">
+                <div className="absolute">
+                <Link target="_blank" href={`service/${path}`} className="px-4 py-2 rounded-3xl bg-gray-100 text-black">
                 Know more &#8594;
               </Link>
+                </div>
+              </div>
             </motion.div>
           </FadeIn>
         </motion.div>

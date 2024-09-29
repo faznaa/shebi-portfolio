@@ -119,6 +119,7 @@ const image = 'https://imageio.forbes.com/specials-images/imageserve/649e548f60d
 const SERVICES = [
   {
     title: "AI-Powered Workflow Automation with ChatGPT",
+    imageUrl:'https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
     component:<WorkflowAutomation/>,
     path:'ai-powered-workflow-automation-with-chatgpt',
     description:
@@ -131,6 +132,8 @@ const SERVICES = [
   
   {
     title: "Chatbot Development & Website Integration",
+    imageUrl:'https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+
     component:<ChatbotDevelopment/>,
 
     path:"chatbot-development-and-website-integration",
@@ -142,6 +145,8 @@ const SERVICES = [
   },
   {
     title: "LLM-Based Tools for Business Innovation",
+    imageUrl:'https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+
     component:<LLMToolsForBusiness/>,
     path:'llm-based-tools-for-business-innovation',
     description:
@@ -154,6 +159,8 @@ const SERVICES = [
   },
   {
     title: "Custom Data Dashboards",
+    imageUrl:'https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80',
+
     component:<DataDashboards/>,
     path:'custom-data-dashboards',
     description:

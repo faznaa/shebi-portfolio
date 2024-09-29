@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function ContactPage() {
   return (
-    <div className='sm:h-screen overflow-hidden'>
+    <div className='sm:h-screen bg-black overflow-hidden'>
         <Navbar/>
         <div className='sm:pt-20'>
         <ContactUs/>

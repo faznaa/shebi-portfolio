@@ -20,17 +20,17 @@ export default function ProjectSingle() {
     <div className='bg-black text-gray-300 min-h-screen pb-10 sm:pb-20'>
         <Navbar/>
         {data?.title && (
-            <div className='pt-10 px-4 sm:px-20'>
-            <div className='text-6xl font-semibold mt-10'>{data.title}</div>
+            <div className='pt-10 px-4 sm:px-20 sm:pt-20'>
+            <div className='text-6xl font-semibold mt-10 mb-4'>{data.title}</div>
             {/* Tags will go here */}
-            <div className='flex justify-start gap-x-2 my-4'>
+            <div className='flex justify-start gap-x-2 my-10 mb-16'>
                 {data.keywords?.map((tag: string) => (
                     <div className='bg-neutral-800 px-4 py-1 text-sm  rounded-full'>
                         {tag}
                     </div>
                 ))}
             </div>
-            <div className='max-w-5xl my-5 flex justify-start'>
+            <div className='max-w-5xl my-5 flex justify-start mb-16'>
             <Carousel images={data.images?.map((i: string) => `/projects/${i}`)}/>
             </div>
             <div className='sm:max-w-5xl'>

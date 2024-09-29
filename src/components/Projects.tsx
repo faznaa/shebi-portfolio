@@ -23,7 +23,7 @@ export default function Projects() {
   
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 gap-y-10 px-4 sm:px-0">
       {DATA.projects.filter(i => i.isFeatured).map((project, index) => (
-      <Link href={`/project/${getPathFromTitle(project.title)}`} target="_blank">
+      <Link href={`/project/${getPathFromTitle(project.title)}`} >
        <motion.div
        whileHover={{y:-10}}
        transition={{duration:0.2}}

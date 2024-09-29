@@ -25,14 +25,13 @@ export default function ProjectsAll() {
         <div
       className="w-full bg-neutral-950 font-sans md:px-10 px-4 sm:px-0"
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto py-20 ">
        <FadeIn>
        <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
           Projects
         </h2>
-        <p className="text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working as an AI Developer for the past 2 years. Here&apos;s
-          a timeline of my journey.
+        <p className="text-neutral-300 text-sm md:text-base max-w-lg">
+        This portfolio showcases a range of AI-driven tools, custom dashboards, and automation solutions designed to solve business challenges. From chatbots to data analytics, each project highlights my ability to create innovative and efficient systems. Explore how these solutions help streamline processes and provide actionable insights for various industries.
         </p>
        </FadeIn>
       </div>
@@ -66,7 +65,7 @@ export default function ProjectsAll() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 gap-y-10 max-w-7xl mx-auto">
       {filteredProjects.map((project:any, index:number) => (
-      <Link href={`/project/${getPathFromTitle(project.title)}`} target="_blank">
+      <Link href={`/project/${getPathFromTitle(project.title)}`} >
        <motion.div
        whileHover={{y:-10}}
        transition={{duration:0.2}}
